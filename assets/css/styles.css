@@ -1,0 +1,231 @@
+/* General Styles */
+
+html {
+  background-image: url('../img/chalkboard.jpg');
+  box-sizing: border-box;
+}
+
+.document {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+  display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 3em;
+    align-content: start;
+}
+
+@media screen {
+  body {
+    border: 1px solid #000;
+    margin: 5vh;
+    padding: .25in .5in;
+    width: 8.5in;
+  }
+}
+
+@media print {
+  html {
+    font-size: .75em;
+  }
+
+  @page {
+    margin: .25in .5in;
+    size: letter;
+  }
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1em;
+  margin: 0;
+}
+
+h1, h3 {
+  font-style: italic;
+  text-indent: 0.1em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl {
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Candidate Section */
+
+.candidate {
+  display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2em;
+}
+
+.title {
+  display: grid;
+    grid-template-rows: 3em 2em;
+    align-items: end;
+}
+
+.contact ul {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3em 2em;
+    grid-column-gap: 1em;
+    align-items: end;
+}
+
+.contact a:before, dt:before {
+  color: rgba(0, 0, 0, 0.25);
+  font-family: "Material Icons";
+  padding-right: 0.25em;
+  vertical-align: bottom;
+}
+
+.contact a:first-child:before {
+  content: '\e8f9';
+}
+
+.contact a[href*="in"]:before {
+  content: '\e7ef';
+}
+
+.contact a[href*="tw"]:before {
+  content: '\e0b7';
+}
+.contact a[href*="git"]:before {
+  content: '\e86f';
+}
+
+.contact a[href*="1"]:before {
+  content: '\e551';
+}
+
+.contact a[href*="mailto"]:before {
+  content: '\e0be';
+}
+
+/* Profile */
+
+.profile {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+main {
+  display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    align-items: start;
+}
+
+/* Experience */
+
+.experience {
+  grid-column: 2 / 3;
+  display: grid;
+    grid-row-gap: 1em;
+}
+
+.experience dl {
+  margin-bottom: 1em;
+}
+
+.experience dl {
+  display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    align-items: end;
+}
+
+.experience dt:nth-child(even) {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.experience dd {
+  grid-column: 1 / 3;
+}
+
+/* Education */
+
+.education {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: grid;
+    grid-row-gap: 1em;
+}
+
+.education dt:first-child {
+  font-size: 1.25em;
+}
+
+dt:first-child {
+  font: 900 1.5em/1.5em "Playfair Display", serif;
+  margin: 0;
+}
+
+.experience dd, .education dd {
+  margin: 1em 0 0;
+}
+
+dt[data-type="company"]:before {
+  content: "\e7f1";
+}
+
+dt[data-type="study"]:before {
+  content: "\e80c";
+}
+
+dt[data-type="date"]:before {
+  content: "\e916";
+}
+
+dt[data-type="location"]:before {
+  content: "\e0c8";
+}
+
+
+/* Skills */
+
+.skills {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  display: grid;
+    grid-row-gap: 1em;
+    align-items: start;
+}
+
+.skills dd {
+  margin: 0;
+}
