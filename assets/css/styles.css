@@ -11,7 +11,7 @@ html {
   line-height: 1.5em;
   display: grid;
     grid-template-rows: auto;
-    grid-row-gap: 3em;
+    grid-row-gap: 1.5em;
     align-content: start;
 }
 
@@ -148,7 +148,7 @@ a {
 main {
   display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 2em;
+    grid-gap: 1.5em 2em;
     align-items: start;
 }
 
