@@ -1,7 +1,6 @@
 /* General Styles */
 
 html {
-  background-image: url('../img/chalkboard.jpg');
   box-sizing: border-box;
 }
 
@@ -17,6 +16,10 @@ html {
 }
 
 @media screen {
+  html {
+    background-image: url('../img/chalkboard.jpg');
+  }
+
   body {
     border: 1px solid #000;
     margin: 5vh;
